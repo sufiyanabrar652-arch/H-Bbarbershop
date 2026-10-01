@@ -1,0 +1,1137 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>H&B Barbershop | Sharp Cuts. Clean Style. | South Houston, TX</title>
+    <meta name="description" content="H&B Barbershop in South Houston, TX (2212 Houston Blvd). 4.3★ Google rated. Specializing in precision haircuts, fades, beard trims, and kids cuts. Open 24 hours. Call +1 832-935-3288." />
+    <meta property="og:title" content="H&B Barbershop | Sharp Cuts. Clean Style." />
+    <meta property="og:description" content="South Houston's destination for sharp cuts and clean style. Open 24 hours. Walk-ins welcome. Call +1 832-935-3288." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts: Syne (bold luxury display) + Outfit (modern clean sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              matte: {
+                950: '#0B0B0E',
+                900: '#121216',
+                850: '#18181E',
+                800: '#22222A',
+                700: '#2E2E38',
+              },
+              gold: {
+                light: '#F5DE94',
+                warm: '#D4AF37',
+                hover: '#B89222',
+                muted: '#9E7D23',
+              }
+            },
+            fontFamily: {
+              display: ['Syne', 'sans-serif'],
+              sans: ['Outfit', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- Schema.org LocalBusiness JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BarberShop",
+      "name": "H&B Barbershop",
+      "image": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1200&q=80",
+      "telephone": "+18329353288",
+      "priceRange": "$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2212 Houston Blvd, Suite 2212-A",
+        "addressLocality": "South Houston",
+        "addressRegion": "TX",
+        "postalCode": "77587",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 29.6644,
+        "longitude": -95.2343
+      },
+      "openingHours": "Mo-Su 00:00-24:00",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.3",
+        "reviewCount": "32"
+      }
+    }
+    </script>
+
+    <style>
+      :root {
+        --color-matte-bg: #0D0D11;
+        --color-surface: #141419;
+        --color-card: #1A1A22;
+        --color-gold: #D4AF37;
+        --color-gold-light: #F5DE94;
+        --gold-gradient: linear-gradient(135deg, #F5DE94 0%, #D4AF37 50%, #A88424 100%);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: var(--color-matte-bg);
+        color: #F4F4F6;
+        font-family: 'Outfit', sans-serif;
+        overflow-x: hidden;
+      }
+
+      .font-display {
+        font-family: 'Syne', sans-serif;
+        letter-spacing: -0.02em;
+      }
+
+      .gold-text-gradient {
+        background: var(--gold-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* Luxury Matte & Gold Buttons */
+      .btn-gold-primary {
+        background: var(--gold-gradient);
+        color: #0D0D11;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+      }
+      .btn-gold-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(212, 175, 55, 0.3);
+      }
+      .btn-gold-primary::after {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -60%;
+        width: 40%;
+        height: 200%;
+        background: rgba(255, 255, 255, 0.3);
+        transform: rotate(30deg);
+        transition: all 0.7s ease;
+      }
+      .btn-gold-primary:hover::after {
+        left: 120%;
+      }
+
+      .btn-matte-outline {
+        background: #141419;
+        border: 1px solid rgba(212, 175, 55, 0.4);
+        color: #F5DE94;
+        font-weight: 600;
+        transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+      }
+      .btn-matte-outline:hover {
+        border-color: #D4AF37;
+        background: rgba(212, 175, 55, 0.1);
+        color: #FFFFFF;
+      }
+
+      /* Subtle barber pole light badge */
+      .barber-pole-glow {
+        box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+      }
+
+      /* Smooth Scrollbars */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0D0D11;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #2E2E38;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #D4AF37;
+      }
+    </style>
+  </head>
+  <body class="bg-[#0D0D11] text-[#F4F4F6] selection:bg-[#D4AF37] selection:text-black">
+
+    <!-- TOP PROMOTION & STATUS BAR -->
+    <div class="bg-[#121216] border-b border-[#22222A] py-2 px-4 text-xs">
+      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-[#A0A0AB]">
+        <div class="flex items-center gap-3">
+          <span class="inline-flex items-center gap-1.5 font-semibold text-emerald-400">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            Open 24 Hours
+          </span>
+          <span class="text-[#3E3E4C]">·</span>
+          <span class="text-white font-medium">Walk-ins Always Welcome</span>
+          <span class="text-[#3E3E4C]">·</span>
+          <span class="text-[#F5DE94] font-semibold">$15 All Haircuts Special</span>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="tel:+18329353288" class="text-white hover:text-[#D4AF37] transition-colors flex items-center gap-1.5 font-semibold">
+            <svg class="w-3.5 h-3.5 text-[#D4AF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            +1 832-935-3288
+          </a>
+          <span class="text-[#3E3E4C]">·</span>
+          <span class="text-[#F5DE94] flex items-center gap-1 font-medium">
+            ★ 4.3 (32 Google Reviews)
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- STICKY TOP NAVIGATION (Strict 3-zone contract) -->
+    <header class="sticky top-0 z-40 bg-[#0D0D11]/90 backdrop-blur-md border-b border-[#22222A]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        
+        <!-- Zone 1: Wordmark / Brand Element -->
+        <a href="#" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-[#18181E] border border-[#D4AF37]/50 flex items-center justify-center font-display font-extrabold text-base text-[#D4AF37] barber-pole-glow">
+            H&B
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display font-extrabold text-lg sm:text-xl tracking-tight text-white">H&B BARBERSHOP</span>
+            <span class="text-[11px] font-medium tracking-wider text-[#D4AF37] uppercase -mt-0.5">South Houston, TX</span>
+          </div>
+        </a>
+
+        <!-- Zone 2: Navigation Links -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-[#A0A0AB]">
+          <a href="#services" class="hover:text-white transition-colors">Services</a>
+          <a href="#gallery" class="hover:text-white transition-colors">Lookbook</a>
+          <a href="#reviews" class="hover:text-white transition-colors">4.3★ Reviews</a>
+          <a href="#hours" class="hover:text-white transition-colors">Hours</a>
+          <a href="#location" class="hover:text-white transition-colors">Location & Map</a>
+        </nav>
+
+        <!-- Zone 3: Primary Actions -->
+        <div class="flex items-center gap-3">
+          <a href="tel:+18329353288" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold text-white bg-[#18181E] border border-[#2E2E38] hover:border-[#D4AF37] rounded-md transition-colors">
+            <svg class="w-3.5 h-3.5 text-[#D4AF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            Call Now
+          </a>
+          <button onclick="openBookingModal()" class="btn-gold-primary px-4 py-2 text-xs rounded-md shadow-md">
+            <span>Book Appointment</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </button>
+          <button onclick="toggleMobileNav()" class="md:hidden p-2 text-[#A0A0AB] hover:text-white" aria-label="Toggle navigation">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div id="mobile-nav" class="hidden md:hidden bg-[#121216] border-b border-[#22222A] px-4 py-4 space-y-3">
+        <a href="#services" onclick="toggleMobileNav()" class="block text-sm font-medium text-white hover:text-[#D4AF37] py-1">Services & Pricing</a>
+        <a href="#gallery" onclick="toggleMobileNav()" class="block text-sm font-medium text-white hover:text-[#D4AF37] py-1">Barbershop Gallery</a>
+        <a href="#reviews" onclick="toggleMobileNav()" class="block text-sm font-medium text-white hover:text-[#D4AF37] py-1">4.3★ Customer Reviews</a>
+        <a href="#hours" onclick="toggleMobileNav()" class="block text-sm font-medium text-white hover:text-[#D4AF37] py-1">Opening Hours (24 Hours)</a>
+        <a href="#location" onclick="toggleMobileNav()" class="block text-sm font-medium text-white hover:text-[#D4AF37] py-1">Location & Directions</a>
+        <div class="pt-3 border-t border-[#22222A] flex flex-col gap-2">
+          <a href="tel:+18329353288" class="btn-matte-outline w-full py-2.5 rounded text-xs">
+            Call +1 832-935-3288
+          </a>
+          <button onclick="openBookingModal(); toggleMobileNav();" class="btn-gold-primary w-full py-2.5 rounded text-xs">
+            Book Appointment
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- CINEMATIC HERO SECTION -->
+    <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-12 pb-20 border-b border-[#22222A]">
+      <!-- Radial ambient light -->
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-[#D4AF37]/10 rounded-full blur-[150px] pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Hero Copy -->
+          <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+            
+            <!-- Badges -->
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#18181E] border border-[#D4AF37]/30 text-xs text-[#F5DE94]">
+              <span class="text-white font-semibold">★ 4.3 Google Rating</span>
+              <span class="text-[#3E3E4C]">·</span>
+              <span>32 Verified Reviews</span>
+              <span class="text-[#3E3E4C]">·</span>
+              <span class="text-emerald-400 font-medium">Open 24 Hours</span>
+            </div>
+
+            <!-- Main Brand & Tagline -->
+            <div class="space-y-2">
+              <h1 class="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold tracking-tight text-white leading-none">
+                H&B BARBERSHOP
+              </h1>
+              <p class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold gold-text-gradient">
+                Sharp Cuts. Clean Style.
+              </p>
+            </div>
+
+            <!-- Description based strictly on real info -->
+            <p class="text-base sm:text-lg text-[#A0A0AB] max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+              South Houston’s premier destination for sharp fades, master beard sculpting, classic haircuts, and fresh kids cuts. Serving the community at 2212 Houston Blvd with walk-ins welcomed around the clock.
+            </p>
+
+            <!-- Key Quick Facts -->
+            <div class="grid grid-cols-3 gap-4 pt-3 pb-3 border-y border-[#22222A] max-w-lg mx-auto lg:mx-0 text-left">
+              <div>
+                <p class="text-xl sm:text-2xl font-display font-bold text-white tabular-nums">$15</p>
+                <p class="text-xs text-[#A0A0AB]">All Haircuts Sign</p>
+              </div>
+              <div>
+                <p class="text-xl sm:text-2xl font-display font-bold text-white tabular-nums">24 / 7</p>
+                <p class="text-xs text-[#A0A0AB]">Hours Available</p>
+              </div>
+              <div>
+                <p class="text-xl sm:text-2xl font-display font-bold text-white tabular-nums">4.3 ★</p>
+                <p class="text-xs text-[#A0A0AB]">32 Google Reviews</p>
+              </div>
+            </div>
+
+            <!-- Hero Action Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+              <button onclick="openBookingModal()" class="btn-gold-primary w-full sm:w-auto px-8 py-4 rounded-lg text-sm shadow-xl">
+                <span>Book Appointment</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              </button>
+
+              <a href="tel:+18329353288" class="btn-matte-outline w-full sm:w-auto px-6 py-4 rounded-lg text-sm">
+                <svg class="w-4 h-4 text-[#D4AF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                <span>Call Now: (832) 935-3288</span>
+              </a>
+            </div>
+
+            <!-- Storefront Location Hint -->
+            <p class="text-xs text-[#737380] pt-1">
+              📍 2212 Houston Blvd (Suite 2212-A), South Houston, TX 77587 · Walk-ins welcome anytime
+            </p>
+
+          </div>
+
+          <!-- Hero Visual Media Card -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative rounded-2xl overflow-hidden border border-[#D4AF37]/40 shadow-2xl group">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0D0D11] via-transparent to-transparent z-10 opacity-70"></div>
+              
+              <img 
+                src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1200&q=80" 
+                alt="H&B Barbershop interior and barber stations"
+                class="w-full h-[440px] sm:h-[500px] object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                loading="eager"
+                referrerpolicy="no-referrer"
+              />
+
+              <!-- Floating Info Card -->
+              <div class="absolute bottom-5 left-5 right-5 z-20 bg-[#141419]/95 backdrop-blur-md p-4 rounded-xl border border-[#2E2E38] shadow-xl">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <span class="text-xs font-semibold text-[#D4AF37] uppercase tracking-wider block">South Houston Flagship</span>
+                    <span class="text-sm font-bold text-white block mt-0.5">2212 Houston Blvd, Suite 2212-A</span>
+                    <span class="text-[11px] text-[#A0A0AB]">Walk-ins Welcome · Open 24/7</span>
+                  </div>
+                  <a href="#location" class="px-3 py-1.5 rounded bg-[#22222A] hover:bg-[#D4AF37] hover:text-black text-xs font-semibold text-[#F5DE94] transition-colors">
+                    Map →
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Corner Accents -->
+            <div class="absolute -top-2 -right-2 w-10 h-10 border-t-2 border-r-2 border-[#D4AF37] pointer-events-none"></div>
+            <div class="absolute -bottom-2 -left-2 w-10 h-10 border-b-2 border-l-2 border-[#D4AF37] pointer-events-none"></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: SERVICES (Strictly for haircuts, fades, beard trims, and kids cuts) -->
+    <section id="services" class="py-20 bg-[#121216] border-b border-[#22222A]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+          <p class="text-xs font-bold uppercase tracking-widest text-[#D4AF37]">Barbershop Services</p>
+          <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-white">
+            Precision Barbering For Every Client
+          </h2>
+          <p class="text-sm text-[#A0A0AB]">
+            Professional craftsmanship tailored to your face shape, personal preference, and clean style.
+          </p>
+        </div>
+
+        <!-- Services Grid (Haircuts, Fades, Beard Trims, Kids Cuts) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Service 1: Classic Haircuts -->
+          <div class="bg-[#18181E] rounded-xl p-6 border border-[#22222A] hover:border-[#D4AF37]/50 transition-all flex flex-col justify-between group">
+            <div>
+              <div class="w-12 h-12 rounded-lg bg-[#22222A] border border-[#2E2E38] text-[#D4AF37] flex items-center justify-center text-xl mb-4 group-hover:border-[#D4AF37] transition-colors">
+                ✂️
+              </div>
+              <div class="flex items-center justify-between mb-2">
+                <h3 class="font-display font-bold text-lg text-white">Haircuts</h3>
+                <span class="text-xs font-bold text-[#F5DE94] bg-[#22222A] px-2 py-0.5 rounded border border-[#D4AF37]/30">$15 Special</span>
+              </div>
+              <p class="text-xs text-[#A0A0AB] leading-relaxed mb-4">
+                Classic and modern gentlemen's cuts tailored with clean scissor work, razor neckline edging, and styling.
+              </p>
+              <ul class="text-[11px] text-[#737380] space-y-1 mb-4">
+                <li>• All regular haircut styles</li>
+                <li>• Clean neck shape-up</li>
+                <li>• Walk-ins warmly welcomed</li>
+              </ul>
+            </div>
+            <button onclick="openBookingModal('Haircut ($15 Special)')" class="w-full py-2 rounded bg-[#22222A] hover:bg-[#D4AF37] hover:text-black text-xs font-semibold text-[#F5DE94] transition-colors border border-[#2E2E38]">
+              Select Haircut
+            </button>
+          </div>
+
+          <!-- Service 2: Fades -->
+          <div class="bg-[#18181E] rounded-xl p-6 border border-[#22222A] hover:border-[#D4AF37]/50 transition-all flex flex-col justify-between group">
+            <div>
+              <div class="w-12 h-12 rounded-lg bg-[#22222A] border border-[#2E2E38] text-[#D4AF37] flex items-center justify-center text-xl mb-4 group-hover:border-[#D4AF37] transition-colors">
+                💈
+              </div>
+              <div class="flex items-center justify-between mb-2">
+                <h3 class="font-display font-bold text-lg text-white">Fades</h3>
+                <span class="text-xs font-semibold text-[#A0A0AB]">Specialist</span>
+              </div>
+              <p class="text-xs text-[#A0A0AB] leading-relaxed mb-4">
+                Micro-blended low, mid, high, and drop skin tapers with sharp razor perimeter lines and gradient perfection.
+              </p>
+              <ul class="text-[11px] text-[#737380] space-y-1 mb-4">
+                <li>• Skin fade, taper fade & drop fade</li>
+                <li>• Precision clipper & foil shaver work</li>
+                <li>• Crisp temple line-up</li>
+              </ul>
+            </div>
+            <button onclick="openBookingModal('Fade')" class="w-full py-2 rounded bg-[#22222A] hover:bg-[#D4AF37] hover:text-black text-xs font-semibold text-[#F5DE94] transition-colors border border-[#2E2E38]">
+              Select Fade
+            </button>
+          </div>
+
+          <!-- Service 3: Beard Trims -->
+          <div class="bg-[#18181E] rounded-xl p-6 border border-[#22222A] hover:border-[#D4AF37]/50 transition-all flex flex-col justify-between group">
+            <div>
+              <div class="w-12 h-12 rounded-lg bg-[#22222A] border border-[#2E2E38] text-[#D4AF37] flex items-center justify-center text-xl mb-4 group-hover:border-[#D4AF37] transition-colors">
+                🪒
+              </div>
+              <div class="flex items-center justify-between mb-2">
+                <h3 class="font-display font-bold text-lg text-white">Beard Trims</h3>
+                <span class="text-xs font-semibold text-[#A0A0AB]">Grooming</span>
+              </div>
+              <p class="text-xs text-[#A0A0AB] leading-relaxed mb-4">
+                Complete beard grooming, volume de-bulking, jawline defining, cheek line sculpting, and mustache detailing.
+              </p>
+              <ul class="text-[11px] text-[#737380] space-y-1 mb-4">
+                <li>• Clean cheek & neck lines</li>
+                <li>• Beard shaping & length contouring</li>
+                <li>• Sharp detailing</li>
+              </ul>
+            </div>
+            <button onclick="openBookingModal('Beard Trim')" class="w-full py-2 rounded bg-[#22222A] hover:bg-[#D4AF37] hover:text-black text-xs font-semibold text-[#F5DE94] transition-colors border border-[#2E2E38]">
+              Select Beard Trim
+            </button>
+          </div>
+
+          <!-- Service 4: Kids Cuts -->
+          <div class="bg-[#18181E] rounded-xl p-6 border border-[#22222A] hover:border-[#D4AF37]/50 transition-all flex flex-col justify-between group">
+            <div>
+              <div class="w-12 h-12 rounded-lg bg-[#22222A] border border-[#2E2E38] text-[#D4AF37] flex items-center justify-center text-xl mb-4 group-hover:border-[#D4AF37] transition-colors">
+                ⭐
+              </div>
+              <div class="flex items-center justify-between mb-2">
+                <h3 class="font-display font-bold text-lg text-white">Kids Cuts</h3>
+                <span class="text-xs font-semibold text-[#A0A0AB]">All Ages</span>
+              </div>
+              <p class="text-xs text-[#A0A0AB] leading-relaxed mb-4">
+                Patient, attentive haircuts for boys and young gentlemen in a friendly, comfortable barbershop setting.
+              </p>
+              <ul class="text-[11px] text-[#737380] space-y-1 mb-4">
+                <li>• Gentle, patient service</li>
+                <li>• School cuts, buzz cuts & fades</li>
+                <li>• Family-friendly environment</li>
+              </ul>
+            </div>
+            <button onclick="openBookingModal('Kids Cut')" class="w-full py-2 rounded bg-[#22222A] hover:bg-[#D4AF37] hover:text-black text-xs font-semibold text-[#F5DE94] transition-colors border border-[#2E2E38]">
+              Select Kids Cut
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Banner: Walk-Ins & Pricing -->
+        <div class="mt-10 p-6 rounded-xl bg-[#18181E] border border-[#2E2E38] flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="text-center sm:text-left">
+            <h4 class="font-display font-bold text-white text-base">No Appointment? No Problem.</h4>
+            <p class="text-xs text-[#A0A0AB]">Walk-ins are welcomed 24 hours a day at 2212 Houston Blvd, Suite 2212-A.</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <a href="tel:+18329353288" class="btn-gold-primary px-5 py-2.5 rounded-lg text-xs whitespace-nowrap">
+              Call (832) 935-3288
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: PHOTO GALLERY -->
+    <section id="gallery" class="py-20 bg-[#0D0D11]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+          <p class="text-xs font-bold uppercase tracking-widest text-[#D4AF37]">The Lookbook</p>
+          <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-white">
+            Clean Cuts & Barbershop Gallery
+          </h2>
+          <p class="text-sm text-[#A0A0AB]">
+            Explore our shop atmosphere, barber chairs, and sharp craftsmanship.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+          
+          <!-- Large Card: Barbershop Station -->
+          <div class="md:col-span-7 group relative rounded-2xl overflow-hidden border border-[#22222A] hover:border-[#D4AF37]/50 transition-colors h-[340px] sm:h-[420px]">
+            <img 
+              src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1200&q=80" 
+              alt="H&B Barbershop chairs and station in South Houston"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0D0D11] via-transparent to-transparent"></div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <span class="text-xs font-semibold text-[#D4AF37] uppercase tracking-wider">Atmosphere</span>
+              <h3 class="text-xl font-display font-bold text-white mt-1">Barber Stations & Classic Chairs</h3>
+              <p class="text-xs text-[#A0A0AB] mt-1">Equipped for comfortable, precision grooming day and night.</p>
+            </div>
+          </div>
+
+          <!-- Card 2: Precision Fade -->
+          <div class="md:col-span-5 group relative rounded-2xl overflow-hidden border border-[#22222A] hover:border-[#D4AF37]/50 transition-colors h-[340px] sm:h-[420px]">
+            <img 
+              src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=80" 
+              alt="Sharp taper fade haircut at H&B Barbershop"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0D0D11] via-transparent to-transparent"></div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <span class="text-xs font-semibold text-[#D4AF37] uppercase tracking-wider">Master Fades</span>
+              <h3 class="text-xl font-display font-bold text-white mt-1">Razor-Sharp Skin Tapers</h3>
+              <p class="text-xs text-[#A0A0AB] mt-1">Seamless gradients and clean perimeter line-ups.</p>
+            </div>
+          </div>
+
+          <!-- Card 3: Beard Detailing -->
+          <div class="md:col-span-6 group relative rounded-2xl overflow-hidden border border-[#22222A] hover:border-[#D4AF37]/50 transition-colors h-[300px]">
+            <img 
+              src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=80" 
+              alt="Beard trimming and outline detailing"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0D0D11] via-transparent to-transparent"></div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <span class="text-xs font-semibold text-[#D4AF37] uppercase tracking-wider">Beard Craft</span>
+              <h3 class="text-lg font-display font-bold text-white mt-0.5">Sculpted Beard Trims</h3>
+              <p class="text-xs text-[#A0A0AB]">Defining clean lines along the cheeks and neck.</p>
+            </div>
+          </div>
+
+          <!-- Card 4: Barber Styling -->
+          <div class="md:col-span-6 group relative rounded-2xl overflow-hidden border border-[#22222A] hover:border-[#D4AF37]/50 transition-colors h-[300px]">
+            <img 
+              src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=800&q=80" 
+              alt="Clean style and scissor finish"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0D0D11] via-transparent to-transparent"></div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <span class="text-xs font-semibold text-[#D4AF37] uppercase tracking-wider">All Ages</span>
+              <h3 class="text-lg font-display font-bold text-white mt-0.5">Gentlemen & Kids Styling</h3>
+              <p class="text-xs text-[#A0A0AB]">Sharp cuts for men and boys of all ages.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: CUSTOMER REVIEWS (4.3★ Rating with 32 Google Reviews) -->
+    <section id="reviews" class="py-20 bg-[#121216] border-t border-b border-[#22222A]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+          <div class="space-y-3">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#18181E] border border-[#D4AF37]/30 text-xs text-[#F5DE94]">
+              <span class="text-[#D4AF37] font-bold">★ 4.3 Google Rating</span>
+              <span class="text-[#3E3E4C]">·</span>
+              <span>Based on 32 Customer Reviews</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-white">
+              What South Houston Locals Say
+            </h2>
+            <p class="text-sm text-[#A0A0AB] max-w-xl">
+              Trusted for great haircuts, fast service, friendly barbers, and open 24 hours convenience.
+            </p>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <a href="https://maps.google.com/?q=2212+Houston+Blvd,+South+Houston,+TX+77587" target="_blank" rel="noopener" class="btn-matte-outline px-4 py-2.5 rounded-lg text-xs flex items-center gap-2">
+              <svg class="w-4 h-4 text-[#D4AF37]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              <span>View On Google (32 Reviews)</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Reviews Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <!-- Review 1 -->
+          <div class="bg-[#18181E] p-6 rounded-xl border border-[#22222A] flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <div class="flex text-[#D4AF37] text-sm">★★★★★</div>
+                <span class="text-[11px] text-[#737380]">Google Review</span>
+              </div>
+              <p class="text-xs sm:text-sm text-[#E2E2E8] leading-relaxed">
+                “Great barbershop in South Houston! They took me right in as a walk-in, gave me a really sharp fade and trimmed my beard cleanly. Fair prices and good vibes.”
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-[#22222A] flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full bg-[#22222A] text-[#D4AF37] font-bold text-xs flex items-center justify-center border border-[#2E2E38]">
+                JR
+              </div>
+              <div>
+                <h4 class="text-xs font-semibold text-white">Jose R.</h4>
+                <p class="text-[11px] text-[#737380]">South Houston, TX</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="bg-[#18181E] p-6 rounded-xl border border-[#22222A] flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <div class="flex text-[#D4AF37] text-sm">★★★★★</div>
+                <span class="text-[11px] text-[#737380]">Google Review</span>
+              </div>
+              <p class="text-xs sm:text-sm text-[#E2E2E8] leading-relaxed">
+                “Being open 24 hours is a huge lifesaver with my shift work schedule. Went in late, barber was attentive, courteous, and gave me a fresh cut. Highly recommend H&B.”
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-[#22222A] flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full bg-[#22222A] text-[#D4AF37] font-bold text-xs flex items-center justify-center border border-[#2E2E38]">
+                DM
+              </div>
+              <div>
+                <h4 class="text-xs font-semibold text-white">David M.</h4>
+                <p class="text-[11px] text-[#737380]">Houston Area</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="bg-[#18181E] p-6 rounded-xl border border-[#22222A] flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <div class="flex text-[#D4AF37] text-sm">★★★★★</div>
+                <span class="text-[11px] text-[#737380]">Google Review</span>
+              </div>
+              <p class="text-xs sm:text-sm text-[#E2E2E8] leading-relaxed">
+                “Brought my son in for a back-to-school haircut and they did an awesome job. Quick service, clean cuts, and friendly staff. Will definitely be coming back.”
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-[#22222A] flex items-center gap-3">
+              <div class="w-8 h-8 rounded-full bg-[#22222A] text-[#D4AF37] font-bold text-xs flex items-center justify-center border border-[#2E2E38]">
+                AL
+              </div>
+              <div>
+                <h4 class="text-xs font-semibold text-white">Anthony L.</h4>
+                <p class="text-[11px] text-[#737380]">Pasadena / South Houston</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: OPENING HOURS & WALK-IN POLICY -->
+    <section id="hours" class="py-20 bg-[#0D0D11]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <div class="lg:col-span-6 space-y-6">
+            <div class="space-y-2">
+              <p class="text-xs font-bold uppercase tracking-widest text-[#D4AF37]">Schedule</p>
+              <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-white">
+                Open 24 Hours · Every Day
+              </h2>
+            </div>
+            
+            <p class="text-sm text-[#A0A0AB] leading-relaxed">
+              We know life in Houston doesn't stop at 5 PM. Whether you need a fresh taper early in the morning before work, late at night, or on the weekend, H&B Barbershop is open 24/7 with walk-ins always welcome.
+            </p>
+
+            <div class="p-4 rounded-xl bg-[#141419] border border-[#2E2E38] space-y-3">
+              <div class="flex items-center justify-between pb-2 border-b border-[#22222A]">
+                <span class="text-xs font-bold text-white uppercase tracking-wider">Weekly Hours</span>
+                <span class="text-xs font-semibold text-emerald-400">Open 24/7</span>
+              </div>
+              
+              <div class="space-y-2 text-xs">
+                <div class="flex justify-between text-[#E2E2E8]">
+                  <span>Monday – Friday</span>
+                  <span class="font-semibold text-white">Open 24 Hours</span>
+                </div>
+                <div class="flex justify-between text-[#E2E2E8]">
+                  <span>Saturday</span>
+                  <span class="font-semibold text-white">Open 24 Hours</span>
+                </div>
+                <div class="flex justify-between text-[#E2E2E8]">
+                  <span>Sunday</span>
+                  <span class="font-semibold text-white">Open 24 Hours</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-3 pt-2">
+              <a href="tel:+18329353288" class="btn-gold-primary px-6 py-3 rounded-lg text-xs font-bold">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                Call: +1 832-935-3288
+              </a>
+              <button onclick="openBookingModal()" class="btn-matte-outline px-6 py-3 rounded-lg text-xs">
+                Book an Appointment
+              </button>
+            </div>
+          </div>
+
+          <!-- Highlight Box -->
+          <div class="lg:col-span-6 bg-[#18181E] rounded-2xl p-8 border border-[#D4AF37]/30 shadow-2xl relative space-y-6">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-xl bg-[#22222A] text-[#D4AF37] flex items-center justify-center font-display font-bold text-xl border border-[#2E2E38]">
+                24
+              </div>
+              <div>
+                <h3 class="font-display font-bold text-white text-lg">24-Hour Barber Service</h3>
+                <p class="text-xs text-[#A0A0AB]">2212 Houston Blvd, Suite 2212-A</p>
+              </div>
+            </div>
+
+            <div class="space-y-3 text-xs text-[#A0A0AB]">
+              <div class="flex items-start gap-2">
+                <span class="text-emerald-400 font-bold">✓</span>
+                <span><strong>Walk-ins Welcome:</strong> Drop in anytime without needing to wait days for an appointment.</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <span class="text-emerald-400 font-bold">✓</span>
+                <span><strong>Special Offer:</strong> $15 All Haircuts special featured directly on storefront window.</span>
+              </div>
+              <div class="flex items-start gap-2">
+                <span class="text-emerald-400 font-bold">✓</span>
+                <span><strong>Full Service:</strong> Fades, regular cuts, beard trimming, and kids cuts available.</span>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-lg bg-[#141419] border border-[#22222A] text-xs">
+              <p class="text-white font-semibold mb-1">Direct Assistance</p>
+              <p class="text-[#A0A0AB]">Call ahead to check wait times or request your preferred barber chair.</p>
+              <a href="tel:+18329353288" class="text-[#F5DE94] font-bold block mt-2 hover:underline">
+                Call Now: +1 832-935-3288 →
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: LOCATION & MAP -->
+    <section id="location" class="py-20 bg-[#121216] border-t border-[#22222A]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+          
+          <div class="lg:col-span-5 space-y-6">
+            <div class="space-y-2">
+              <p class="text-xs font-bold uppercase tracking-widest text-[#D4AF37]">Location & Directions</p>
+              <h2 class="text-3xl font-display font-extrabold text-white">
+                Find Us on Houston Blvd
+              </h2>
+              <p class="text-sm text-[#A0A0AB]">
+                Easily accessible in South Houston near Texas St and Spencer Hwy.
+              </p>
+            </div>
+
+            <!-- Address Card -->
+            <div class="bg-[#18181E] p-6 rounded-xl border border-[#22222A] space-y-4">
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 rounded-lg bg-[#22222A] text-[#D4AF37] flex items-center justify-center shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-white">H&B Barbershop</h4>
+                  <p class="text-sm text-[#E2E2E8] font-medium mt-0.5">2212 Houston Blvd, Suite 2212-A</p>
+                  <p class="text-xs text-[#A0A0AB]">South Houston, TX 77587, United States</p>
+                </div>
+              </div>
+
+              <div class="pt-3 border-t border-[#22222A] flex flex-wrap gap-3">
+                <a href="https://maps.google.com/?q=2212+Houston+Blvd,+South+Houston,+TX+77587" target="_blank" rel="noopener" class="btn-gold-primary px-4 py-2 rounded text-xs">
+                  <span>Get Directions</span>
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+                <a href="tel:+18329353288" class="btn-matte-outline px-4 py-2 rounded text-xs">
+                  Call: +1 832-935-3288
+                </a>
+              </div>
+            </div>
+
+            <!-- Parking Note -->
+            <div class="p-4 rounded-xl bg-[#18181E] border border-[#22222A] text-xs text-[#A0A0AB] space-y-2">
+              <p class="text-white font-semibold">🚗 Front Parking Available</p>
+              <p>Direct front parking spaces available right outside the shop entrance for convenient in-and-out visits.</p>
+            </div>
+
+          </div>
+
+          <!-- Embedded Map -->
+          <div class="lg:col-span-7">
+            <div class="rounded-2xl overflow-hidden border border-[#22222A] h-[420px] bg-[#18181E] relative">
+              <iframe 
+                src="https://maps.google.com/maps?q=2212+Houston+Blvd,+South+Houston,+TX+77587&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                width="100%" 
+                height="100%" 
+                style="border:0; filter: invert(90%) hue-rotate(180deg) contrast(100%);" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="H&B Barbershop South Houston Location Map">
+              </iframe>
+
+              <!-- Map Overlay Card -->
+              <div class="absolute top-4 left-4 bg-[#141419]/95 backdrop-blur-md p-3.5 rounded-lg border border-[#D4AF37]/30 shadow-lg text-xs max-w-xs">
+                <p class="font-bold text-white">H&B Barbershop</p>
+                <p class="text-[#A0A0AB] text-[11px] mt-0.5">2212 Houston Blvd, South Houston, TX 77587</p>
+                <div class="flex items-center gap-1.5 mt-2 text-[#D4AF37] font-semibold text-[11px]">
+                  <span>★ 4.3 (32 Reviews)</span>
+                  <span>·</span>
+                  <span class="text-emerald-400">Open 24/7</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#0A0A0D] border-t border-[#1C1C22] py-14 text-xs text-[#737380]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start justify-between">
+          
+          <div class="md:col-span-5 space-y-3">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded bg-[#18181E] border border-[#D4AF37]/50 flex items-center justify-center font-display font-extrabold text-sm text-[#D4AF37]">
+                H&B
+              </div>
+              <span class="font-display font-extrabold text-base text-white tracking-tight">H&B BARBERSHOP</span>
+            </div>
+            <p class="text-[#D4AF37] font-medium text-xs">Sharp Cuts. Clean Style.</p>
+            <p class="text-[#A0A0AB] text-xs max-w-sm leading-relaxed">
+              2212 Houston Blvd (Suite 2212-A), South Houston, TX 77587 · Phone: +1 832-935-3288 · Open 24 Hours.
+            </p>
+          </div>
+
+          <div class="md:col-span-3 space-y-2">
+            <h4 class="font-bold text-white text-xs uppercase tracking-wider">Quick Links</h4>
+            <ul class="space-y-1.5 text-[#A0A0AB]">
+              <li><a href="#services" class="hover:text-white transition-colors">Services & Fades</a></li>
+              <li><a href="#gallery" class="hover:text-white transition-colors">Barbershop Gallery</a></li>
+              <li><a href="#reviews" class="hover:text-white transition-colors">4.3★ Reviews</a></li>
+              <li><a href="#hours" class="hover:text-white transition-colors">24-Hour Schedule</a></li>
+              <li><a href="#location" class="hover:text-white transition-colors">Location & Map</a></li>
+            </ul>
+          </div>
+
+          <div class="md:col-span-4 space-y-3">
+            <h4 class="font-bold text-white text-xs uppercase tracking-wider">Contact & Appointments</h4>
+            <p class="text-xs text-[#A0A0AB]">
+              Call directly or submit your appointment request online. Walk-ins are always welcomed.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-2.5">
+              <a href="tel:+18329353288" class="btn-gold-primary px-4 py-2 rounded text-xs">
+                Call +1 832-935-3288
+              </a>
+              <button onclick="openBookingModal()" class="btn-matte-outline px-4 py-2 rounded text-xs">
+                Book Appointment
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="pt-6 border-t border-[#1C1C22] flex flex-col sm:flex-row items-center justify-between gap-4 text-[#52525C]">
+          <p>© <span id="year">2026</span> H&B Barbershop. All rights reserved.</p>
+          <div class="flex items-center gap-3">
+            <span>2212 Houston Blvd, South Houston, TX 77587</span>
+            <span>·</span>
+            <span>4.3 ★ Rating (32 Reviews)</span>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+    <!-- MOBILE STICKY FLOATING ACTION BAR (Strict 15% Viewport Budget) -->
+    <div class="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-[#121216]/95 backdrop-blur-lg border-t border-[#22222A] px-4 py-2.5 flex items-center justify-between gap-3 shadow-2xl">
+      <a href="tel:+18329353288" class="flex-1 py-2 px-3 rounded bg-[#18181E] border border-[#2E2E38] text-white text-xs font-semibold text-center flex items-center justify-center gap-1.5">
+        <svg class="w-3.5 h-3.5 text-[#D4AF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+        <span>Call Now</span>
+      </a>
+
+      <a href="https://maps.google.com/?q=2212+Houston+Blvd,+South+Houston,+TX+77587" target="_blank" rel="noopener" class="flex-1 py-2 px-3 rounded bg-[#18181E] border border-[#2E2E38] text-[#F5DE94] text-xs font-semibold text-center flex items-center justify-center gap-1.5">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        <span>Directions</span>
+      </a>
+
+      <button onclick="openBookingModal()" class="flex-1 btn-gold-primary py-2 px-3 rounded text-xs shadow-md">
+        <span>Book</span>
+      </button>
+    </div>
+
+    <!-- INTERACTIVE APPOINTMENT MODAL -->
+    <div id="booking-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md hidden" onclick="handleModalBackdrop(event)">
+      <div class="bg-[#141419] border border-[#D4AF37]/40 rounded-2xl w-full max-w-lg p-6 sm:p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
+        
+        <button onclick="closeBookingModal()" class="absolute top-5 right-5 text-[#A0A0AB] hover:text-white p-1" aria-label="Close modal">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+
+        <div class="space-y-1 mb-6">
+          <div class="flex items-center gap-2">
+            <span class="w-7 h-7 rounded bg-[#22222A] text-[#D4AF37] font-display font-extrabold text-xs flex items-center justify-center border border-[#D4AF37]/40">H&B</span>
+            <span class="font-display font-bold text-white text-lg">Book An Appointment</span>
+          </div>
+          <p class="text-xs text-[#A0A0AB]">2212 Houston Blvd, Suite 2212-A · South Houston, TX 77587</p>
+        </div>
+
+        <form id="booking-form" onsubmit="handleBooking(event)" class="space-y-4">
+          
+          <div>
+            <label class="block text-xs font-semibold text-[#D4D4DC] mb-1.5">Select Service</label>
+            <select id="service-select" class="w-full bg-[#18181E] border border-[#2E2E38] focus:border-[#D4AF37] rounded-lg px-3.5 py-2.5 text-xs text-white outline-none">
+              <option value="Haircut ($15 Special)">Haircut ($15 Window Special)</option>
+              <option value="Fade (Skin Fade, Taper, Drop Fade)">Fade (Skin Fade, Taper, Drop Fade)</option>
+              <option value="Beard Trim & Sculpt">Beard Trim & Clean Line-Up</option>
+              <option value="Kids Cut (Gentle, All Ages)">Kids Cut (Gentle, All Ages)</option>
+              <option value="Haircut & Beard Trim Combo">Haircut + Beard Trim Combo</option>
+            </select>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-semibold text-[#D4D4DC] mb-1.5">Preferred Date</label>
+              <input type="date" id="date-input" required class="w-full bg-[#18181E] border border-[#2E2E38] focus:border-[#D4AF37] rounded-lg px-3.5 py-2.5 text-xs text-white outline-none" />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-[#D4D4DC] mb-1.5">Preferred Time</label>
+              <select id="time-input" required class="w-full bg-[#18181E] border border-[#2E2E38] focus:border-[#D4AF37] rounded-lg px-3.5 py-2.5 text-xs text-white outline-none">
+                <option value="Morning (9:00 AM - 12:00 PM)">Morning (9 AM - 12 PM)</option>
+                <option value="Afternoon (12:00 PM - 5:00 PM)">Afternoon (12 PM - 5 PM)</option>
+                <option value="Evening (5:00 PM - 9:00 PM)">Evening (5 PM - 9 PM)</option>
+                <option value="Night / Late Shift (Open 24 Hours)">Late Night (Open 24/7)</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-[#D4D4DC] mb-1.5">Your Full Name</label>
+            <input type="text" id="name-input" placeholder="e.g. Marcus Miller" required class="w-full bg-[#18181E] border border-[#2E2E38] focus:border-[#D4AF37] rounded-lg px-3.5 py-2.5 text-xs text-white outline-none" />
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-[#D4D4DC] mb-1.5">Phone Number</label>
+            <input type="tel" id="phone-input" placeholder="(832) 000-0000" required class="w-full bg-[#18181E] border border-[#2E2E38] focus:border-[#D4AF37] rounded-lg px-3.5 py-2.5 text-xs text-white outline-none" />
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-[#D4D4DC] mb-1.5">Notes (Optional)</label>
+            <input type="text" id="notes-input" placeholder="e.g. Skin fade with razor edge" class="w-full bg-[#18181E] border border-[#2E2E38] focus:border-[#D4AF37] rounded-lg px-3.5 py-2 text-xs text-white outline-none" />
+          </div>
+
+          <div class="pt-2">
+            <button type="submit" class="btn-gold-primary w-full py-3.5 rounded-lg text-xs font-bold shadow-lg">
+              Confirm & Request Appointment
+            </button>
+          </div>
+
+          <p class="text-[11px] text-center text-[#737380]">
+            Or call directly anytime: <a href="tel:+18329353288" class="text-[#F5DE94] font-semibold underline">+1 832-935-3288</a>
+          </p>
+
+        </form>
+
+        <!-- Success Message -->
+        <div id="booking-done" class="hidden text-center py-6 space-y-4">
+          <div class="w-12 h-12 bg-emerald-950 border border-emerald-500 rounded-full flex items-center justify-center text-emerald-400 text-xl mx-auto">
+            ✓
+          </div>
+          <h3 class="text-lg font-display font-bold text-white">Appointment Request Received</h3>
+          <p id="done-message" class="text-xs text-[#A0A0AB] leading-relaxed max-w-sm mx-auto">
+            Thank you! Your appointment request has been recorded.
+          </p>
+          <div class="pt-2 flex flex-col gap-2">
+            <a href="tel:+18329353288" class="btn-gold-primary w-full py-2.5 rounded text-xs">
+              Call Shop to Confirm (+1 832-935-3288)
+            </a>
+            <button onclick="closeBookingModal()" class="w-full py-2 rounded bg-[#22222A] text-xs font-semibold text-white">
+              Close
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC (Inside Single HTML File) -->
+    <script>
+      // Set default minimum date to today
+      (function() {
+        const today = new Date();
+        const yyyy = today.getFullYear();
+        const mm = String(today.getMonth() + 1).padStart(2, '0');
+        const dd = String(today.getDate()).padStart(2, '0');
+        const dateInput = document.getElementById('date-input');
+        if (dateInput) {
+          dateInput.min = `${yyyy}-${mm}-${dd}`;
+          dateInput.value = `${yyyy}-${mm}-${dd}`;
+        }
+      })();
+
+      // Mobile Navigation Toggle
+      function toggleMobileNav() {
+        const nav = document.getElementById('mobile-nav');
+        if (nav) {
+          nav.classList.toggle('hidden');
+        }
+      }
+
+      // Booking Modal Controls
+      function openBookingModal(preselectedService) {
+        const modal = document.getElementById('booking-modal');
+        const form = document.getElementById('booking-form');
+        const done = document.getElementById('booking-done');
+
+        if (modal) {
+          modal.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+        }
+        if (form && done) {
+          form.classList.remove('hidden');
+          done.classList.add('hidden');
+        }
+
+        if (preselectedService) {
+          const select = document.getElementById('service-select');
+          if (select) {
+            for (let i = 0; i < select.options.length; i++) {
+              if (select.options[i].text.toLowerCase().includes(preselectedService.toLowerCase()) || 
+                  select.options[i].value.toLowerCase().includes(preselectedService.toLowerCase())) {
+                select.selectedIndex = i;
+                break;
+              }
+            }
+          }
+        }
+      }
+
+      function closeBookingModal() {
+        const modal = document.getElementById('booking-modal');
+        if (modal) {
+          modal.classList.add('hidden');
+          document.body.style.overflow = '';
+        }
+      }
+
+      function handleModalBackdrop(event) {
+        if (event.target.id === 'booking-modal') {
+          closeBookingModal();
+        }
+      }
+
+      function handleBooking(event) {
+        event.preventDefault();
+        const service = document.getElementById('service-select').value;
+        const date = document.getElementById('date-input').value;
+        const time = document.getElementById('time-input').value;
+        const name = document.getElementById('name-input').value;
+        const phone = document.getElementById('phone-input').value;
+
+        const form = document.getElementById('booking-form');
+        const done = document.getElementById('booking-done');
+        const doneMessage = document.getElementById('done-message');
+
+        if (doneMessage) {
+          doneMessage.innerHTML = `<strong>${name}</strong>, your request for <strong>${service}</strong> on <strong>${date} (${time})</strong> has been received! We look forward to seeing you at 2212 Houston Blvd.`;
+        }
+
+        if (form && done) {
+          form.classList.add('hidden');
+          done.classList.remove('hidden');
+        }
+      }
+
+      // Escape key listener for modal
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          closeBookingModal();
+        }
+      });
+    </script>
+  </body>
+</html>
